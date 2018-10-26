@@ -1,0 +1,25 @@
+server:
+  port: 8762
+logging:
+  level:
+    org.hibernate: trace
+    org.springframework: trace
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: eureka-client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8764
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
